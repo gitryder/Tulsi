@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity implements
 
         mProgressBar = findViewById(R.id.mProgressBar);
 
-        mainActivityPresenter.initToolbar();
         mainActivityPresenter = new MainActivityPresenter(this);
+        mainActivityPresenter.initToolbar();
         mainActivityPresenter.loadData();
     }
 
