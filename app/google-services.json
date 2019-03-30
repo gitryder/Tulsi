@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "617424491322",
+    "firebase_url": "https://tulsi-68732.firebaseio.com",
+    "project_id": "tulsi-68732",
+    "storage_bucket": "tulsi-68732.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617424491322:android:6051c0684767b88a",
+        "android_client_info": {
+          "package_name": "com.realllydan.tulsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617424491322-c2ver6uk8v917ttjh4k0r0chm5v4mpr0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.realllydan.tulsi",
+            "certificate_hash": "cfd8b9f77b7f483f6b86aff25065ea27615cf264"
+          }
+        },
+        {
+          "client_id": "617424491322-j7r2mobp825eebsotnkkap5t9k307cu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMi8lRFgK-Br4GsS-qQIms8QMqb-xqXQc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617424491322-j7r2mobp825eebsotnkkap5t9k307cu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

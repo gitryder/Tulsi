@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tulsi</string>
+
+    <!--Main Page Strings-->
+    <string name="main_page_title">Tulsi</string>
+    <string name="main_page_menu_title">On the Menu: </string>
+    <string name="name_placeholder_male">Danyl Fernandes</string>
+    <string name="contact_placeholder_male">7678019980</string>
+    <string name="name_placeholder_female">Leah Todd</string>
+    <string name="contact_placeholder_female">9545628234</string>
+</resources>

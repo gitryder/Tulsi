@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#fafafa</color>
+    <color name="colorAccent">#FD5523</color>
+
+    <!--TEST Activity Colors-->
+    <color name="activityBackground">#fff</color>
+
+    <!--TEST Text Colors-->
+    <color name="headerTextColor">#000</color>
+    <color name="subTextColor">#80000000</color>
+
+</resources>

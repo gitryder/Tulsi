@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/karla_bold"
+        android:text="@string/main_page_title"
+        android:textColor="@color/headerTextColor"
+        android:textSize="64sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mToolbar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mUserImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_male_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mAppName" />
+
+    <TextView
+        android:id="@+id/mUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/karla_bold"
+        android:text="@string/name_placeholder_male"
+        android:textColor="@color/headerTextColor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/mUserImage"
+        app:layout_constraintTop_toTopOf="@+id/mUserImage" />
+
+    <TextView
+        android:id="@+id/mUserContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/karla"
+        android:text="@string/contact_placeholder_male"
+        android:textColor="@color/subTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mUserImage"
+        app:layout_constraintStart_toEndOf="@+id/mUserImage"
+        app:layout_constraintTop_toBottomOf="@+id/mUsername" />
+
+    <TextView
+        android:id="@+id/mMenuHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/karla_bold"
+        android:text="@string/main_page_menu_title"
+        android:textColor="@color/headerTextColor"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mUserContact" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mMenuHeader" />
+
+    <ProgressBar
+        android:id="@+id/mProgressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/mRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/mRecyclerView" />
+
+   <!--<ImageView-->
+        <!--android:id="@+id/mCartButton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/cart_bg_shape"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent" />-->
+
+</android.support.constraint.ConstraintLayout>
