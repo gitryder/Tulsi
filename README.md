@@ -13,8 +13,8 @@
 
 # Screenshots
 <p>
-  <img src="screenshots/home_male.png" width="280"/>
-  <img src="screenshots/home_female.png" width="280"/>
+  <img src="screenshots/one.png" width="280"/>
+  <img src="screenshots/two.png" width="280"/>
 </p>
 
 # Dependencies
