@@ -18,25 +18,25 @@ import java.util.List;
 
 import static android.view.View.GONE;
 
-public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.ViewHolder> {
+public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.ViewHolder> {
 
-    private static final String TAG = "FoodItemAdapter";
+    private static final String TAG = "CartItemAdapter";
 
     private Context context;
     private List<Food> mFoodList = new ArrayList<>();
-    private OnFoodItemClickListener onFoodItemClickListener;
+    private OnCartItemClickListener onCartItemClickListener;
 
-    public FoodItemAdapter(Context context, List<Food> mFoodList, OnFoodItemClickListener onFoodItemClickListener) {
+    public CartItemAdapter(Context context, List<Food> mFoodList, OnCartItemClickListener onCartItemClickListener) {
         this.context = context;
         this.mFoodList = mFoodList;
-        this.onFoodItemClickListener = onFoodItemClickListener;
+        this.onCartItemClickListener = onCartItemClickListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.single_food_item, viewGroup, false);
-        return new ViewHolder(view, onFoodItemClickListener);
+        return new ViewHolder(view, onCartItemClickListener);
     }
 
     @Override
@@ -63,9 +63,9 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.ViewHo
 
         ImageView mFoodTypeImage, mAddButton, mRemoveButton;
         TextView mFoodName, mFoodPrice, mFoodQuantity, mDefaultText;
-        OnFoodItemClickListener onFoodItemClickListener;
+        OnCartItemClickListener onCartItemClickListener;
 
-        public ViewHolder(@NonNull View itemView, OnFoodItemClickListener onFoodItemClickListener) {
+        public ViewHolder(@NonNull View itemView, OnCartItemClickListener onCartItemClickListener) {
             super(itemView);
             mFoodTypeImage = itemView.findViewById(R.id.mFoodTypeImage);
             mFoodName = itemView.findViewById(R.id.mFoodName);
@@ -74,7 +74,7 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.ViewHo
             mAddButton = itemView.findViewById(R.id.mAddButton);
             mRemoveButton = itemView.findViewById(R.id.mRemoveButton);
             mDefaultText = itemView.findViewById(R.id.mDefaultText);
-            this.onFoodItemClickListener = onFoodItemClickListener;
+            this.onCartItemClickListener = onCartItemClickListener;
 
             mAddButton.setOnClickListener(this);
             mRemoveButton.setOnClickListener(this);
@@ -85,11 +85,11 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.ViewHo
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.mAddButton:
-                    onFoodItemClickListener.onItemAdded(getAdapterPosition());
+                    onCartItemClickListener.onItemAdded(getAdapterPosition());
                     break;
 
                 case R.id.mRemoveButton:
-                    onFoodItemClickListener.onItemRemoved(getAdapterPosition());
+                    onCartItemClickListener.onItemRemoved(getAdapterPosition());
                     break;
 
                 case R.id.mDefaultText:
@@ -110,7 +110,7 @@ public class FoodItemAdapter extends RecyclerView.Adapter<FoodItemAdapter.ViewHo
         }
     }
 
-    public interface OnFoodItemClickListener{
+    public interface OnCartItemClickListener{
         /**
          * Called when a food item is added to the RecyclerView
          * by clicking the plus button on the view

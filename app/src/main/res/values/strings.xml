@@ -1,11 +1,32 @@
 <resources>
-    <string name="app_name">Tulsi</string>
+    <string name="app_name">Courtyard</string>
 
     <!--Main Page Strings-->
-    <string name="main_page_title">Tulsi</string>
+    <string name="main_page_title">Courtyard</string>
     <string name="main_page_menu_title">On the Menu: </string>
     <string name="name_placeholder_male">Danyl Fernandes</string>
     <string name="contact_placeholder_male">7678019982</string>
     <string name="name_placeholder_female">Leah Todd</string>
     <string name="contact_placeholder_female">9545628234</string>
+
+    <!--Cart Page Strings-->
+    <string name="cart_page_title">Your Cart</string>
+    <string name="cart_page_subtitle">Review your food cart</string>
+
+    <!--Receipt Page Strings-->
+    <string name="reciept_page_title">Receipt</string>
+    <string name="reciept_page_subtitle"># 65431</string>
+
+    <string name="reciept_page_stamp_title">Stamped</string>
+    <string name="reciept_page_stamp_placeholder">23rd Feb 19 02:43 PM</string>
+
+    <string name="reciept_page_payment_title">Mode of Payment</string>
+    <string name="reciept_page_payment_placeholder">Cash</string>
+
+    <string name="reciept_page_particulars_title">Particulars</string>
+    <string name="reciept_page_particulars_placeholder">Chicken Tikka (2)\n₹45/U </string>
+
+    <string name="reciept_page_amount_title">Amount</string>
+    <string name="reciept_page_amount_placeholder">₹225</string>
+
 </resources>

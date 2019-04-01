@@ -7,9 +7,9 @@
         android:endColor="#F55555"
         android:angle="315"/>
     <size
-        android:width="40dp"
-        android:height="40dp"/>
+        android:width="200dp"
+        android:height="70dp"/>
     <corners
-        android:topLeftRadius="70dp"/>
+        android:topLeftRadius="50dp"/>
 
 </shape>

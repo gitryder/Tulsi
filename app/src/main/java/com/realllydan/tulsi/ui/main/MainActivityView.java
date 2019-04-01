@@ -6,8 +6,13 @@ import java.util.List;
 
 public interface MainActivityView {
     void displayData(List<Food> foodList);
+    void showDatabaseError(String errorMessage);
+
     void initToolbar();
+
     void showProgressBar();
     void hideProgressBar();
-    void showDatabaseError(String errorMessage);
+
+    void showCartButton();
+    void hideCartButton();
 }

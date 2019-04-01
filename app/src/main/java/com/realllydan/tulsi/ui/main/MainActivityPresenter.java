@@ -63,4 +63,12 @@ public class MainActivityPresenter {
         view.showProgressBar();
     }
 
+    public void showCartButton() {
+        view.showCartButton();
+    }
+
+    public void hideCartButton() {
+        view.hideCartButton();
+    }
+
 }

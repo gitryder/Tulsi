@@ -1,6 +1,9 @@
 package com.realllydan.tulsi.data.models;
 
-public class Food {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Food implements Parcelable {
 
     public static final String TYPE_VEG = "Veg";
     public static final String TYPE_NON_VEG = "Non-Veg";
@@ -20,6 +23,25 @@ public class Food {
         this.quantity = 0;
         this.price = price;
     }
+
+    protected Food(Parcel in) {
+        name = in.readString();
+        type = in.readString();
+        quantity = in.readInt();
+        price = in.readInt();
+    }
+
+    public static final Creator<Food> CREATOR = new Creator<Food>() {
+        @Override
+        public Food createFromParcel(Parcel in) {
+            return new Food(in);
+        }
+
+        @Override
+        public Food[] newArray(int size) {
+            return new Food[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -51,5 +73,18 @@ public class Food {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(type);
+        dest.writeInt(quantity);
+        dest.writeInt(price);
     }
 }
