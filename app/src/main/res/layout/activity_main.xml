@@ -12,6 +12,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <android.support.v7.widget.SearchView
+        android:id="@+id/mSearchView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mToolbar"/>
+
     <TextView
         android:id="@+id/mAppName"
         android:layout_width="wrap_content"
@@ -23,7 +33,7 @@
         android:textColor="@color/headerTextColor"
         android:textSize="64sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mToolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/mSearchView" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/mUserImage"

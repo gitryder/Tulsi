@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements
     private Toolbar mToolbar;
     private ProgressBar mProgressBar;
     private ImageView mCartButton;
+    private SearchView mSearchView;
+    private MenuItem searchMenuItem;
 
     //vars
     private List<Food> mFoodList;
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements
 
         mProgressBar = findViewById(R.id.mProgressBar);
         mCartButton = findViewById(R.id.mCartButton);
+        mSearchView = findViewById(R.id.mSearchView);
 
         mSelectedFoods.addOnChangeListener(this);
 
@@ -221,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_activity_menu, menu);
+        searchMenuItem = menu.findItem(R.id.action_search);
         return true;
     }
 
@@ -228,10 +233,17 @@ public class MainActivity extends AppCompatActivity implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                for (Food food : mSelectedFoods) {
-                    Log.d(TAG, "Food: " + food.getName() + " : " + food.getQuantity());
-                }
-                Log.d(TAG, "Food: mSelectedSize: " + mSelectedFoods.size());
+                searchMenuItem.setVisible(false);
+                mSearchView.setVisibility(View.VISIBLE);
+
+                mSearchView.setOnCloseListener(new SearchView.OnCloseListener() {
+                    @Override
+                    public boolean onClose() {
+                        searchMenuItem.setVisible(true);
+                        mSearchView.setVisibility(View.GONE);
+                        return false;
+                    }
+                });
                 break;
 
             default:
